@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --pastel-blue: #b0e0e6; /* Azul pastel */
+    --pastel-teal: #a8d8ea; /* Verde azulado pastel */
+    --pastel-light: #e0f7fa; /* Azul claro pastel */
+    --pastel-dark: #607d8b; /* Gris oscuro pastel */
+  }
+
+
+* {
+  box-sizing: border-box;
+}
+.bg_pastel-blue{
+  background-color: var(--pastel-blue);
+}
+.bg_pastel-teal{
+  background-color: var(--pastel-teal);
+}
+.bg_pastel-light{
+  background-color: var(--pastel-light);
+}
+.bg_pastel-dark{
+  background-color: var(--pastel-dark);
+}
+  
+
+/*  ESTO ES PARA EL SCRO[LBAR*/
+/* width */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px var(--pastel-teal); 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--pastel-dark); 
+  border-radius: 10px;
+}

@@ -1,9 +1,21 @@
-import React from 'react'
+import React from 'react';
+import { Ingredients } from '../Ingredients';
+import Menu from '../Menu';
 
-const Layout = () => {
+const Layout = ({ children }) => {
   return (
-    <div>Layout</div>
-  )
-}
+    <div className="flex h-screen w-screen bg-slate-100">
+      <div className="w-20">
+        <Ingredients  />
+      </div>
+      <section className="flex-grow flex flex-col">
+        <Menu className='h-1/12 overflow-auto'/>
+        <div className='flex-grow overflow-auto p-4'>
+          {children}
+        </div>
+      </section>
+    </div>
+  );
+};
 
-export default Layout
+export default Layout;
