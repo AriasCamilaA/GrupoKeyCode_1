@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { useRecipesByIngredient } from '../hooks/useRecipesByIngredient';
 
-const Recetas = () => {
+export const Recetas = () => {
   const [ingredient, setIngredient] = useState('chicken_breast');
   const { recipes, error, loading } = useRecipesByIngredient(ingredient);
 
@@ -38,4 +38,4 @@ const Recetas = () => {
   );
 };
 
-export default Recetas;
+

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useRecipeById } from '../hooks/useRecipeById';
 
-const Descripcion = () => {
+export const Descripcion = () => {
   const { recipe, error, loading } = useRecipeById(52818);
 
   if (loading) return <p>Cargando...</p>;
@@ -21,5 +21,3 @@ const Descripcion = () => {
     </div>
   );
 };
-
-export default Descripcion;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useIngredients } from '../hooks/useIngredients';
 
-const Topin = () => {
+export const Topin = () => {
   const { ingredients, error, loading } = useIngredients();
 
   if (loading) return <p>Cargando...</p>;
@@ -18,5 +18,3 @@ const Topin = () => {
     </div>
   );
 };
-
-export default Topin;

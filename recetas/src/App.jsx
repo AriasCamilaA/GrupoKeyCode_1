@@ -1,14 +1,14 @@
 import { BrowserRouter, Routes, Route} from "react-router-dom";
 import "./index.css";
-import { Recetas, Ingredientes, Descripcion, Error404, Topin} from "./pages";
+import { Recetas, Ingredientes, Descripcion, Error404, Topin, Home} from "./pages";
 import Menu from "./components/Menu";
 
 function App() {
   return (
     <>
-    <h1>INVENTARIO CULINARIO</h1>
-    <Menu/>
+      <h1>INVENTARIO CULINARIO</h1>
       <BrowserRouter>
+        <Menu/>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/Descripcion" element={<Descripcion />} />

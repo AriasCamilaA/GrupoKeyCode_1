@@ -4,10 +4,10 @@ const Menu = () => {
   return (
     <nav>
       <NavLink to= {"/"}> Home </NavLink>
-      <NavLink to= {"/Acerca"}> Descripcion </NavLink>
-      <NavLink to= {"/Productos"}> Recetas </NavLink>
-      <NavLink to= {"/Servicios"}> Ingredientes </NavLink>
-      <NavLink to= {"/Servicios"}> Topin </NavLink>
+      <NavLink to= {"/Descripcion"}> Descripcion </NavLink>
+      <NavLink to= {"/Recetas"}> Recetas </NavLink>
+      <NavLink to= {"/ingredientes"}> Ingredientes </NavLink>
+      <NavLink to= {"/Topin"}> Topin </NavLink>
     </nav>
   );
 };

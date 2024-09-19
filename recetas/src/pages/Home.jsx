@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useRecipeByName } from '../hooks/useRecipeByName'; 
 
-const Home = () => {
+export const Home = () => {
   const [recipeName, setRecipeName] = useState("Arrabiata");
   const { recipe, error, loading } = useRecipeByName(recipeName);
 
@@ -42,4 +42,3 @@ const Home = () => {
   );
 };
 
-export default Home;
