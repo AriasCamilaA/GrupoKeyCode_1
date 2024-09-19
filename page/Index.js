@@ -1,0 +1,6 @@
+export {Home} from './Home'
+export {Ingredientes} from './Ingredientes'
+export {Receta} from './Receta'
+export {Descripcion} from './Descripcion'
+export {Topin} from './Topin'
+export {Error404} from './Error404'
