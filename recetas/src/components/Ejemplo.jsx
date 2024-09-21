@@ -1,27 +1,33 @@
 import React from 'react';
 
-const RecetaComida = ({ receta }) => {
-  if (!receta) {
-    return <p className="text-center text-red-500">Cargando receta...</p>;
-  }
+const Ejemplo = () => {
+  // Datos simulados para una receta (pueden venir de una API o hook)
+  const recetaEjemplo = {
+    name: "Spaghetti Bolognese",
+    area: "Italia",
+    category: "Pasta",
+    image: "https://www.themealdb.com/images/media/meals/sutysw1468247559.jpg",
+    ingredients: ["500g Spaghetti", "400g Carne molida", "Tomates", "Ajo", "Cebolla", "Sal", "Pimienta"],
+    instructions: "Cocinar la pasta. Preparar la salsa con carne y tomate. Mezclar y servir caliente."
+  };
 
   return (
-    <div className="max-w-4xl mx-auto p-6 bg-white shadow-lg rounded-lg">
+    <div className="max-w-4xl mx-auto p-6 bg-white shadow-lg rounded-lg mt-8">
       {/* Título de la receta */}
       <h1 className="text-3xl font-bold text-center text-gray-800 mb-4">
-        {receta.name}
+        {recetaEjemplo.name}
       </h1>
 
       {/* Descripción con categoría y área */}
       <p className="text-lg text-gray-600 text-center mb-6">
-        {receta.area}, Categoría: {receta.category}
+        {recetaEjemplo.area}, Categoría: {recetaEjemplo.category}
       </p>
 
       {/* Imagen de la receta */}
       <div className="flex justify-center mb-6">
         <img
-          src={receta.image}
-          alt={receta.name}
+          src={recetaEjemplo.image}
+          alt={recetaEjemplo.name}
           className="rounded-lg shadow-md"
         />
       </div>
@@ -30,7 +36,7 @@ const RecetaComida = ({ receta }) => {
       <div className="mb-6">
         <h2 className="text-2xl font-semibold text-gray-700 mb-4">Ingredientes</h2>
         <ul className="list-disc list-inside text-gray-700">
-          {receta.ingredients.map((ingredient, index) => (
+          {recetaEjemplo.ingredients.map((ingredient, index) => (
             <li key={index}>{ingredient}</li>
           ))}
         </ul>
@@ -39,7 +45,7 @@ const RecetaComida = ({ receta }) => {
       {/* Instrucciones para preparar la receta */}
       <div className="mb-6">
         <h2 className="text-2xl font-semibold text-gray-700 mb-4">Instrucciones</h2>
-        <p className="text-gray-700">{receta.instructions}</p>
+        <p className="text-gray-700">{recetaEjemplo.instructions}</p>
       </div>
 
       {/* Botón para ver más recetas */}
@@ -50,6 +56,6 @@ const RecetaComida = ({ receta }) => {
       </div>
     </div>
   );
-};
+}
 
-export default RecetaComida;
+export default Ejemplo;

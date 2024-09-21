@@ -1,0 +1,6 @@
+export * from './Home'
+export * from './Ingredientes'
+export * from './Recetas'
+export * from './Descripcion'
+export * from './Topin'
+export * from './Error404'
