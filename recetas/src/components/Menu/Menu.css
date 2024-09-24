@@ -1,0 +1,23 @@
+.nav-link {
+  padding: 1rem;
+  border-radius: 0.25rem;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  border: 1px solid var(--pastel-teal);
+  transition: all 0.3s;
+}
+
+.nav-link-active {
+  color: var(--pastel-teal);
+  font-weight: bold;
+  background-color: var(--pastel-light);
+}
+
+.nav-link-inactive {
+  color: var(--pastel-dark);
+}
+
+.nav-link:hover {
+  color: var(--pastel-teal);
+}

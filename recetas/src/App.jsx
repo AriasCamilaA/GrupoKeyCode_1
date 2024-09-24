@@ -8,18 +8,17 @@ import Ejemplo from './components/Ejemplo';
 function App() {
   return (
     <>
-      <h1 className="text-4xl font-bold text-center my-8 text-white">INVENTARIO CULINARIO</h1>
       <BrowserRouter>
-        <Menu />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/descripcion" element={<Descripcion />} />
-          <Route path="/ingredientes" element={<Ingredientes />} />
-          <Route path="/recetas" element={<Recetas />} />
-          <Route path="/topin" element={<Topin />} />
-          <Route path="/ejemplo" element={<Ejemplo />} /> {/* Nueva ruta para el componente Ejemplo */}
-          <Route path="*" element={<Error404 />} />
-        </Routes>
+        <Layout>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/Descripcion" element={<Descripcion />} />
+            <Route path="/Ingredientes" element={<Ingredientes />} />
+            <Route path="/Recetas" element={<Recetas />} />
+            <Route path="/Topin" element={<Topin />} />
+            <Route path="*" element={<Error404 />} />
+          </Routes>
+        </Layout>
       </BrowserRouter>
     </>
   );
