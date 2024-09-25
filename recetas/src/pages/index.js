@@ -1,5 +1,5 @@
+export * from './Home'
 export * from './Ingredientes'
 export * from './Recetas'
 export * from './Descripcion'
 export * from './Error404'
-export * from './Pasos'
