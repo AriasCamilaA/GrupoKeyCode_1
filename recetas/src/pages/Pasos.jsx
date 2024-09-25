@@ -2,8 +2,8 @@ import React from 'react';
 import { useRecipeById } from '../hooks/useRecipeById';
 import { useParams } from 'react-router-dom';
 
-export const Ingredientes = () => {
-  const {IdReceta} = useParams()
+export const Pasos = () => {
+  const { IdReceta } = useParams()
   const { recipe, error, loading } = useRecipeById(IdReceta);
 
   if (loading) return <p>Cargando...</p>;
@@ -13,15 +13,7 @@ export const Ingredientes = () => {
   return (
     <div>
       <h2>{recipe?.name}</h2>
-      
-      <h3>Ingredientes</h3>
-      <ul>
-        {recipe?.ingredients.map((ingredient, index) => (
-          <li key={index}>
-            {ingredient} - {recipe?.measures[index]}
-          </li>
-        ))}
-      </ul>
+      <p><strong>Pasos:</strong> {recipe?.instructions}</p>
     </div>
   );
 };

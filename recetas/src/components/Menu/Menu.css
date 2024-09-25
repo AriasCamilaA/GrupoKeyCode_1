@@ -6,6 +6,7 @@
   text-decoration: none;
   border: 1px solid var(--pastel-teal);
   transition: all 0.3s;
+  color: var(--pastel-dark);
 }
 
 .nav-link-active {
@@ -15,9 +16,16 @@
 }
 
 .nav-link-inactive {
-  color: var(--pastel-dark);
+  color: var(--pastel-gray);
 }
 
 .nav-link:hover {
   color: var(--pastel-teal);
+}
+
+.nav-link-disabled {
+  color: var(--pastel-teal); 
+  border: 1px solid var(--pastel-teal); 
+  cursor: not-allowed; 
+  pointer-events: none;
 }

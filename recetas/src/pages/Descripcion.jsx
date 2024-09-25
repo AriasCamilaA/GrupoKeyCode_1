@@ -3,7 +3,7 @@ import { useRecipeById } from '../hooks/useRecipeById';
 import { useParams } from 'react-router-dom';
 
 export const Descripcion = () => {
-  const {IdReceta} = useParams()
+  const { IdReceta } = useParams()
   const { recipe, error, loading } = useRecipeById(IdReceta);
 
   if (loading) return <p>Cargando...</p>;
@@ -16,8 +16,6 @@ export const Descripcion = () => {
       <img src={recipe?.image} alt={recipe?.name} />
       <p><strong>Categoría:</strong> {recipe?.category}</p>
       <p><strong>Área:</strong> {recipe?.area}</p>
-      <p><strong>Instrucciones:</strong> {recipe?.instructions}</p>
-      <p><strong>Etiquetas:</strong> {recipe?.tags.join(', ')}</p>
       <p><strong>Video:</strong> <a href={recipe?.youtube} target="_blank" rel="noopener noreferrer">Ver en YouTube</a></p>
 
     </div>
