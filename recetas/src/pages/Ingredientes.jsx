@@ -1,8 +1,11 @@
 import React from 'react';
 import { useRecipeById } from '../hooks/useRecipeById';
+import { useRecipeByName } from '../hooks/useRecipeByName';
+import { useParams } from 'react-router-dom';
 
 export const Ingredientes = () => {
-  const { recipe, error, loading } = useRecipeById(52818);
+  const {IdRecetas} = useParams()
+  const { recipe, error, loading } = useRecipeById(IdRecetas);
 
   if (loading) return <p>Cargando...</p>;
   if (error) return <p>Error: {error.message}</p>;

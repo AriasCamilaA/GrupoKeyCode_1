@@ -1,9 +1,11 @@
 
 import React, { useState } from 'react';
 import { useRecipesByIngredient } from '../hooks/useRecipesByIngredient';
+import { useParams } from 'react-router-dom';
 
 export const Recetas = () => {
-  const [ingredient, setIngredient] = useState('chicken_breast');
+  const {NameIngredient} = useParams()
+  const [ingredient, setIngredient] = useState(NameIngredient ?  NameIngredient : "");
   const { recipes, error, loading } = useRecipesByIngredient(ingredient);
 
   const handleSearch = (e) => {
@@ -26,7 +28,7 @@ export const Recetas = () => {
         {recipes && recipes?.length > 0 ? (
           recipes?.map((recipe) => (
             <div key={recipe.id}>
-              <h3>{recipe.name}</h3>
+              <a href={`/Descripcion/${recipe.id}`}>{recipe.name}</a>
               <img src={recipe.image} alt={recipe.name} />
             </div>
           ))

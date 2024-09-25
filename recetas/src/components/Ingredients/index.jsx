@@ -1,5 +1,6 @@
 import React from 'react';
-import { useIngredients } from '../../hooks/useIngredients';
+import { useIngredients } from '../../hooks/useIngredients'
+
 
 export const Ingredients = () => {
   const { ingredients, error, loading } = useIngredients();
@@ -15,11 +16,13 @@ export const Ingredients = () => {
           className="w-full"
         >
           {/* Imagen del ingrediente */}
+          <a href={`/Recetas/${ingredient.name}`}>
           <img
             src={ingredient.imageSmall}
             alt={ingredient.name}
             className="bg_pastel-teal w-20 h-20 object-cover rounded-full shadow-md transition-transform transform hover:scale-110 cursor-pointer"
           />
+            </a>
         </div>
       ))}
     </div>
